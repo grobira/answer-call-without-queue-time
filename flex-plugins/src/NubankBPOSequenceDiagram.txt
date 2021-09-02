@@ -1,0 +1,43 @@
+title Team View CronJob Strategy
+
+loop repeats until pagination is done
+Backend->Worker API: Request workers data
+end
+Backend->Backend: Builds aggregated data by affiliation and activity
+Backend->Sync : Push data to document
+Flex->Sync : Can access data anytime
+
+======================================================
+
+title Team View with Functions (Temp Sync Strategy)
+
+loop Front keeps calling function until pagination is over
+Front-> Function: Request Team View update / Send next_page_url
+Function->Sync Temp : Request existing workers data
+Function->Worker API: Request workers data
+Function->Function: Builds aggregated data by  affiliation and activity
+Function->Sync Temp : Push data to Sync doc
+alt if completed
+Function->Sync : Push data to document
+Function->Sync Temp : Delete temporary data
+end
+Function --> Front : next_page_url or completed
+end
+Flex->Sync : Can access data anytime
+
+
+
+======================================================
+
+title Team View with Functions (REST params Strategy)
+
+loop Front keeps calling function until pagination is over
+Front -> Function: Send workers data already recieved and next page url if exists
+Function->Worker API: Request workers data
+Function-->Front : Responds with  { workers data, next_page_url, completed }
+end
+
+Front -> Function: Send completed workers data
+Function->Function: Builds aggregated data by  affiliation and activity
+Function->Sync : Push data to document
+Flex->Sync : Can access data anytime

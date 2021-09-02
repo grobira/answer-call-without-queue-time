@@ -1,0 +1,3 @@
+calls-crud/data.db
+*/node_modules
+*.env.*

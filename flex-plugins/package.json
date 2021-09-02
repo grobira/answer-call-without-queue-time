@@ -1,0 +1,19 @@
+{
+  "name": "flex-plugins",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "postinstall": "flex-plugin pre-script-check",
+    "start": "twilio flex:plugins:start"
+  },
+  "dependencies": {
+    "flex-plugin-scripts": "^4.5.0-beta.0",
+    "react": "16.5.2",
+    "react-dom": "16.5.2",
+    "twilio-taskrouter": "^0.5.4"
+  },
+  "devDependencies": {
+    "@twilio/flex-ui": "^1",
+    "react-test-renderer": "16.5.2"
+  }
+}

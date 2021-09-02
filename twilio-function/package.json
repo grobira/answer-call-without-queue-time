@@ -1,0 +1,16 @@
+{
+  "name": "twilio-function",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "lokijs": "^1.5.12",
+    "twilio": "^3.67.1"
+  }
+}

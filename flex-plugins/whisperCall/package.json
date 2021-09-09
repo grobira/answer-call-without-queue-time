@@ -1,6 +1,6 @@
 {
-  "name": "flex-plugins",
-  "version": "0.0.0",
+  "name": "whisperCall",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "postinstall": "flex-plugin pre-script-check",

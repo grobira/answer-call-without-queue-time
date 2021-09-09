@@ -1,3 +1,5 @@
 calls-crud/data.db
 */node_modules
 *.env.*
+twilio-function/.twiliodeployinfo
+.DS_Store
